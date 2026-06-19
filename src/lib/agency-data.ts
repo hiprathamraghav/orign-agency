@@ -36,7 +36,7 @@ export const services: Service[] = [
   {
     key: "webdev",
     title: "Website Development",
-    shortTitle: "Web Design",
+    shortTitle: "Website Development",
     intro: "Custom websites built to grow brands, convert visitors, and feel polished on every screen.",
     href: "/webdev",
     Icon: Code2,

@@ -60,14 +60,14 @@ export function SiteNav() {
             </div>
           </div>
         </div>
-        <ButtonLink href="/contact" className="hidden h-10 px-5 md:inline-flex">
+        <ButtonLink href="/contact" className="hidden h-10 px-5 lg:inline-flex">
           Get in touch
         </ButtonLink>
 
         {/* Mobile Menu Button */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="flex md:hidden items-center justify-center size-10 rounded-full hover:bg-white/50 transition"
+          className="flex lg:hidden items-center justify-center size-10 rounded-full hover:bg-white/50 transition"
           aria-label="Toggle menu"
         >
           {mobileMenuOpen ? (
@@ -86,7 +86,7 @@ export function SiteNav() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ type: "spring", stiffness: 300, damping: 30 }}
-            className="absolute inset-x-0 top-20 mx-4 rounded-3xl border border-[#07111f]/10 bg-white/95 backdrop-blur-xl shadow-xl md:hidden"
+            className="absolute inset-x-0 top-20 mx-4 rounded-3xl border border-[#07111f]/10 bg-white/95 backdrop-blur-xl shadow-xl lg:hidden"
           >
             <div className="flex flex-col gap-2 p-4">
               {navItems.map((item) => (
