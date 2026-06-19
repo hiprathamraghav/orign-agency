@@ -26,8 +26,8 @@ export default function ContactPage() {
               <h1 className="text-5xl font-medium md:text-7xl">Have an idea?</h1>
               <p className="font-serif text-5xl italic text-[#07111f]/35 md:text-7xl">Let&apos;s build</p>
               <div className="mt-20 max-w-md">
-                <a href="mailto:hello@orign.studio" className="border-b border-[#07111f]/25 pb-3 text-2xl font-medium">
-                  hello@orign.studio
+                <a href="mailto:orign911@gmail.com" className="border-b border-[#07111f]/25 pb-3 text-2xl font-medium">
+                  info@orign.studio
                 </a>
                 <p className="mt-8 leading-7 text-[#07111f]/58">
                   We are accepting new partnerships for brand films, websites, podcasts, shoots, and social systems. Expect a response within 8-12 hours.

@@ -174,7 +174,7 @@ export default function Home() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-lime-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-lime-300"></span>
               </span>
-              Creative Production System 2026
+              Digital Marketing and Creative Agency
             </div>
           </Reveal>
 
@@ -737,10 +737,10 @@ export default function Home() {
                 and creative strategy.
               </p>
               <a
-                href="mailto:hello@orign.studio"
+                href="mailto:orign911@gmail.com"
                 className="mt-3 md:mt-4 block text-xs md:text-sm font-bold text-[#073653] hover:underline"
               >
-                hello@orign.studio
+                info@orign.studio
               </a>
             </div>
             <FooterLinks
