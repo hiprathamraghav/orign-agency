@@ -1,10 +1,12 @@
 "use client";
 
-import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { ArrowUpRight, CheckCircle2 } from "lucide-react";
+import { ArrowUpRight, Loader2 } from "lucide-react";
 import { services } from "@/lib/agency-data";
 import { Button } from "@/components/ui/button";
+import { toast } from "sonner";
+import { sendContactEmail } from "@/actions/mail";
+// import { sendContactEmail } from "@/app/actions/mail"; // Adjust path to match your folder structure
 
 type Inquiry = {
   name: string;
@@ -15,18 +17,40 @@ type Inquiry = {
 };
 
 export function ContactForm() {
-  const [sent, setSent] = useState(false);
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isSubmitting },
     reset,
   } = useForm<Inquiry>();
 
-  function onSubmit(data: Inquiry) {
-    console.log("New inquiry", data);
-    setSent(true);
-    reset();
+  async function onSubmit(data: Inquiry) {
+    try {
+      // Package data into standard FormData instances for Server Actions
+      const formData = new FormData();
+      formData.append("name", data.name);
+      formData.append("email", data.email);
+      formData.append("service", data.service);
+      formData.append("company", data.budget); // Mapping budget range to company/context parameter
+      formData.append("message", data.message);
+
+      const response = await sendContactEmail(null, formData);
+
+      if (response.success) {
+        toast.success("Inquiry Captured", {
+          description: response.message || "Brief transmitted. Expect our loop inside 8-12 hours.",
+        });
+        reset();
+      } else {
+        toast.error("Submission Failed", {
+          description: response.message || "Something broke down. Please try again.",
+        });
+      }
+    } catch (error) {
+      toast.error("Ecosystem Transmission Error", {
+        description: "An unexpected error occurred. Please contact us directly.",
+      });
+    }
   }
 
   return (
@@ -40,7 +64,8 @@ export function ContactForm() {
           <input
             {...register("name", { required: "Name is required" })}
             placeholder="John Doe"
-            className="border-b border-[#07111f]/15 bg-transparent py-3 text-base font-medium normal-case text-[#07111f] outline-none placeholder:text-[#07111f]/35 focus:border-[#b00046]"
+            disabled={isSubmitting}
+            className="border-b border-[#07111f]/15 bg-transparent py-3 text-base font-medium normal-case text-[#07111f] outline-none placeholder:text-[#07111f]/35 focus:border-[#b00046] disabled:opacity-50"
           />
           {errors.name && <span className="text-xs text-[#ff8c82]">{errors.name.message}</span>}
         </label>
@@ -52,7 +77,8 @@ export function ContactForm() {
               pattern: { value: /^\S+@\S+$/i, message: "Use a valid email" },
             })}
             placeholder="john@company.com"
-            className="border-b border-[#07111f]/15 bg-transparent py-3 text-base font-medium normal-case text-[#07111f] outline-none placeholder:text-[#07111f]/35 focus:border-[#b00046]"
+            disabled={isSubmitting}
+            className="border-b border-[#07111f]/15 bg-transparent py-3 text-base font-medium normal-case text-[#07111f] outline-none placeholder:text-[#07111f]/35 focus:border-[#b00046] disabled:opacity-50"
           />
           {errors.email && <span className="text-xs text-[#ff8c82]">{errors.email.message}</span>}
         </label>
@@ -60,7 +86,8 @@ export function ContactForm() {
           Service
           <select
             {...register("service", { required: "Choose a service" })}
-            className="border-b border-[#07111f]/15 bg-transparent py-3 text-base font-medium normal-case text-[#07111f] outline-none focus:border-[#b00046]"
+            disabled={isSubmitting}
+            className="border-b border-[#07111f]/15 bg-transparent py-3 text-base font-medium normal-case text-[#07111f] outline-none focus:border-[#b00046] disabled:opacity-50"
           >
             <option className="bg-white" value="">
               Choose service
@@ -77,15 +104,16 @@ export function ContactForm() {
           Budget range
           <select
             {...register("budget", { required: "Choose a budget" })}
-            className="border-b border-[#07111f]/15 bg-transparent py-3 text-base font-medium normal-case text-[#07111f] outline-none focus:border-[#b00046]"
+            disabled={isSubmitting}
+            className="border-b border-[#07111f]/15 bg-transparent py-3 text-base font-medium normal-case text-[#07111f] outline-none focus:border-[#b00046] disabled:opacity-50"
           >
             <option className="bg-white" value="">
               Choose budget
             </option>
-            <option className="bg-white">Under $2,000</option>
-            <option className="bg-white">$2,000 - $5,000</option>
-            <option className="bg-white">$5,000 - $10,000</option>
-            <option className="bg-white">$10,000+</option>
+            <option className="bg-white">Under ₹12,000</option>
+            <option className="bg-white">₹12,000 - ₹25,000</option>
+            <option className="bg-white">₹25,000 - ₹₹0,000</option>
+            <option className="bg-white">₹50,000+</option>
           </select>
           {errors.budget && <span className="text-xs text-[#ff8c82]">{errors.budget.message}</span>}
         </label>
@@ -96,24 +124,30 @@ export function ContactForm() {
           {...register("message", { required: "Tell us a little about the project" })}
           placeholder="Tell us about your project..."
           rows={5}
-          className="resize-none border-b border-[#07111f]/15 bg-transparent py-3 text-base font-medium normal-case text-[#07111f] outline-none placeholder:text-[#07111f]/35 focus:border-[#b00046]"
+          disabled={isSubmitting}
+          className="resize-none border-b border-[#07111f]/15 bg-transparent py-3 text-base font-medium normal-case text-[#07111f] outline-none placeholder:text-[#07111f]/35 focus:border-[#b00046] disabled:opacity-50"
         />
         {errors.message && <span className="text-xs text-[#ff8c82]">{errors.message.message}</span>}
       </label>
+      
       <Button
         type="submit"
         size="lg"
         className="mt-8 w-full"
+        disabled={isSubmitting}
       >
-        Send inquiry
-        <ArrowUpRight className="size-4" />
+        {isSubmitting ? (
+          <>
+            Sending brief...
+            <Loader2 className="ml-2 size-4 animate-spin" />
+          </>
+        ) : (
+          <>
+            Send inquiry
+            <ArrowUpRight className="size-4" />
+          </>
+        )}
       </Button>
-      {sent && (
-        <p className="mt-5 inline-flex items-center gap-2 rounded-full bg-lime-300/35 px-4 py-2 text-sm font-bold text-[#07111f]">
-          <CheckCircle2 className="size-4" />
-          Inquiry captured. Connect this form to email or a CRM when you are ready.
-        </p>
-      )}
     </form>
   );
 }

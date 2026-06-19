@@ -3,6 +3,10 @@ import Link from "next/link";
 import Image from "next/image";
 import { SiteNav } from "@/components/site-nav";
 import "./globals.css";
+import { Geist } from "next/font/google";
+import { cn } from "@/lib/utils";
+
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 export const metadata: Metadata = {
   title: {
@@ -89,7 +93,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full antialiased scroll-smooth">
+    <html lang="en" className={cn("h-full antialiased scroll-smooth", "font-sans", geist.variable)}>
       <head>
         {/* Explicit alternate favicon declarations to clear stubborn browser tab asset caches */}
         <link rel="icon" href="/logo.jpeg" type="image/jpeg" />

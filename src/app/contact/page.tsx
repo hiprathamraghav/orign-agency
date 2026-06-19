@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { ContactForm } from "@/components/contact-form";
 import { Reveal } from "@/components/motion-primitives";
+import { Toaster } from "@/components/ui/sonner"; // Importing shadcn sonner provider component
 
 export const metadata = {
   title: "Get in Touch | Orign Creative Agency",
@@ -10,6 +11,9 @@ export const metadata = {
 export default function ContactPage() {
   return (
     <main className="min-h-screen bg-[#fbfaf3] px-5 py-10 text-[#07111f] md:px-8">
+      {/* Mounted Sonner Toaster container provider */}
+      <Toaster position="top-right" closeButton richColors />
+      
       <div className="mx-auto flex min-h-[calc(100vh-5rem)] max-w-6xl flex-col justify-between">
         <Link href="/" className="mt-24 inline-flex w-fit items-center gap-2 text-sm font-bold text-[#07111f]/60 hover:text-[#b00046]">
           <ArrowLeft className="size-4" />
