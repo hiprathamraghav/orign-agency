@@ -29,7 +29,7 @@ export async function sendContactEmail(prevState: any, formData: FormData): Prom
   try {
     await resend.emails.send({
       from: "onboarding@resend.dev", // Replace with your verified custom domain email once configured in Resend (e.g., hello@orign.co.in)
-      to: ["orign911@gmail.com"], // Your inbox destination
+      to: ["theorign911@gmail.com"], // Your inbox destination
       subject: `🚨 New Lead // ${company} - ${service}`,
       replyTo: email,
       html: `
