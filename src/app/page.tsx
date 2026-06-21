@@ -48,7 +48,7 @@ const reviewsRow1 = [
     role: "Founder, Delta Growth Labs",
     avatarText: "AM",
     tag: "Next.js / Infra",
-    text: "They completely overhauled our fragmented consumer pipeline into an optimization engine that scaled our engineering infrastructure. The modular logic behind their UI systems completely altered our primary acquisition metrics."
+    text: "They completely overhauled our fragmented consumer pipeline into an optimization engine that scaled our engineering infrastructure. The modular logic behind their UI systems completely altered our primary acquisition metrics.",
   },
   {
     id: "OR-02",
@@ -56,7 +56,7 @@ const reviewsRow1 = [
     role: "Chief Marketing Officer, Aura",
     avatarText: "ER",
     tag: "Identity",
-    text: "Our multi-channel shoot, content loops, and landing page finally felt like a single premium brand voice speaking clearly. They don't just export files; they design systems that print retention."
+    text: "Our multi-channel shoot, content loops, and landing page finally felt like a single premium brand voice speaking clearly. They don't just export files; they design systems that print retention.",
   },
   {
     id: "OR-04",
@@ -64,7 +64,7 @@ const reviewsRow1 = [
     role: "CEO, Gambhir Internationals",
     avatarText: "BG",
     tag: "UI-UX / Web",
-    text: "Our commercial multi-cam shoots went from logistically messy to absolutely systematic. They engineered our content engine so every creative output had an explicit analytical objective."
+    text: "Our commercial multi-cam shoots went from logistically messy to absolutely systematic. They engineered our content engine so every creative output had an explicit analytical objective.",
   },
   {
     id: "OR-03",
@@ -72,7 +72,7 @@ const reviewsRow1 = [
     role: "VP of Product, Zephyr Fintech",
     avatarText: "RS",
     tag: "Video Engine",
-    text: "Meticulous engineering execution. They designed our enterprise landing systems with custom Tailwind logic that brought our interactive components to life. Conversion friction was essentially eliminated."
+    text: "Meticulous engineering execution. They designed our enterprise landing systems with custom Tailwind logic that brought our interactive components to life. Conversion friction was essentially eliminated.",
   },
   {
     id: "OR-05",
@@ -80,7 +80,7 @@ const reviewsRow1 = [
     role: "Founder, Paradigm Media Group",
     avatarText: "DC",
     tag: "Growth Systems",
-    text: "Meticulous, faster than humanly possible, and incredibly strategic. Every single asset delivered had a mechanical purpose assigned to it. Absolutely no creative fluff here."
+    text: "Meticulous, faster than humanly possible, and incredibly strategic. Every single asset delivered had a mechanical purpose assigned to it. Absolutely no creative fluff here.",
   },
   {
     id: "OR-06",
@@ -88,7 +88,7 @@ const reviewsRow1 = [
     role: "Director of Brand, Vyper Commerce",
     avatarText: "KM",
     tag: "Social Systems",
-    text: "The clipping systems they set up for our distribution took our founder-led media assets straight to hyper-scale. They map out virality like standard software deployment."
+    text: "The clipping systems they set up for our distribution took our founder-led media assets straight to hyper-scale. They map out virality like standard software deployment.",
   },
   {
     id: "OR-07",
@@ -96,8 +96,8 @@ const reviewsRow1 = [
     role: "Creative Producer, The Matrix Pod",
     avatarText: "PH",
     tag: "Showrunners",
-    text: "Our studio layout and post-production workflow completely changed after their audit. They balanced absolute typographical perfection with automated batch video delivery."
-  }
+    text: "Our studio layout and post-production workflow completely changed after their audit. They balanced absolute typographical perfection with automated batch video delivery.",
+  },
 ];
 
 const reviewsRow2 = [
@@ -107,7 +107,7 @@ const reviewsRow2 = [
     role: "Executive Producer, The Next Wave",
     avatarText: "SJ",
     tag: "Showrunners",
-    text: "Our founder-led podcast went from improvised to hyper-intentional without losing its underlying personality. They managed to balance extreme design polish with absolute structural efficiency."
+    text: "Our founder-led podcast went from improvised to hyper-intentional without losing its underlying personality. They managed to balance extreme design polish with absolute structural efficiency.",
   },
   {
     id: "OR-09",
@@ -115,7 +115,7 @@ const reviewsRow2 = [
     role: "Chief Growth Officer, Omnichannel IN",
     avatarText: "VS",
     tag: "Clipping / Automations",
-    text: "Our raw audience retention metrics went vertical within weeks of integrating their short-form production framework. They handle raw timeline cuts with deep product engineering precision."
+    text: "Our raw audience retention metrics went vertical within weeks of integrating their short-form production framework. They handle raw timeline cuts with deep product engineering precision.",
   },
   {
     id: "OR-10",
@@ -123,7 +123,7 @@ const reviewsRow2 = [
     role: "Founder, Bloom Cosmetics",
     avatarText: "NP",
     tag: "Brand Shoot",
-    text: "The lookbook and premium ad assets they directed redefined how we present luxury e-commerce in India. No creative fluff—just beautiful, performance-optimized visual materials."
+    text: "The lookbook and premium ad assets they directed redefined how we present luxury e-commerce in India. No creative fluff—just beautiful, performance-optimized visual materials.",
   },
   {
     id: "OR-11",
@@ -131,7 +131,7 @@ const reviewsRow2 = [
     role: "Director of Organic, Stealth Labs",
     avatarText: "KC",
     tag: "Content Engine",
-    text: "They understand immediate social loop mechanics and world-class typographical layouts at the same exact time. Our raw viewer retention charts went almost completely vertical inside 45 days."
+    text: "They understand immediate social loop mechanics and world-class typographical layouts at the same exact time. Our raw viewer retention charts went almost completely vertical inside 45 days.",
   },
   {
     id: "OR-12",
@@ -139,7 +139,7 @@ const reviewsRow2 = [
     role: "Head of Marketing, Juno Payments",
     avatarText: "AV",
     tag: "Web Dev",
-    text: "They built our high-traffic marketing framework using clean Next.js architecture that feels elite and converts beautifully. Best technical design layout team in the region, bar none."
+    text: "They built our high-traffic marketing framework using clean Next.js architecture that feels elite and converts beautifully. Best technical design layout team in the region, bar none.",
   },
   {
     id: "OR-13",
@@ -147,7 +147,7 @@ const reviewsRow2 = [
     role: "Director, Catalyst Studio",
     avatarText: "MD",
     tag: "Media Pipelines",
-    text: "Our media workflows were entirely transformed by their content delivery network blueprint. They are the tactical architecture partners you hire when you want to dominate distribution."
+    text: "Our media workflows were entirely transformed by their content delivery network blueprint. They are the tactical architecture partners you hire when you want to dominate distribution.",
   },
   {
     id: "OR-14",
@@ -155,7 +155,7 @@ const reviewsRow2 = [
     role: "Founder, Apex Webworks",
     avatarText: "RR",
     tag: "Growth Engines",
-    text: "Unparalleled clarity in engineering logic. They bridged the gap between complex digital design systems and extreme front-end web speed. Our platform engagement multiplied 3x."
+    text: "Unparalleled clarity in engineering logic. They bridged the gap between complex digital design systems and extreme front-end web speed. Our platform engagement multiplied 3x.",
   },
   {
     id: "OR-15",
@@ -163,8 +163,8 @@ const reviewsRow2 = [
     role: "VP of Digital, NeoRetail",
     avatarText: "DK",
     tag: "Social Systems",
-    text: "They transformed our enterprise's digital footprint into an active interactive workspace. Their systematic approach to content distribution eliminated all guesswork from our channels."
-  }
+    text: "They transformed our enterprise's digital footprint into an active interactive workspace. Their systematic approach to content distribution eliminated all guesswork from our channels.",
+  },
 ];
 
 const team = [
@@ -795,7 +795,7 @@ export default function Home() {
             />
             <FooterLinks
               title="Services"
-              links={services.slice(0, 4).map((s) => s.shortTitle)}
+              links={services.map((s) => s.shortTitle)}
             />
             <FooterLinks
               title="Social"
@@ -873,21 +873,51 @@ function AudienceCard({
 }
 
 function FooterLinks({ title, links }: { title: string; links: string[] }) {
+  // Mapping titles directly to routes or production URLs
+  const routeMap: Record<string, string> = {
+    // Pages Layout Map
+    Home: "/",
+    Services: "/services",
+    Work: "/work",
+    Contact: "/contact",
+    WebsiteDevelopment: "/webdev",
+    Videography: "/videography",
+    Photography: "/photography",
+    VideoClipping: "/clipping",
+    Podcast: "/podcast",
+    SocialMedia: "/social-media",
+
+    // Social Handles (Update with your exact endpoints)
+    Instagram: "https://www.instagram.com/orign.co/",
+    X: "https://x.com/orign911/",
+    LinkedIn: "https://www.linkedin.com/in/orign-co-75a232418",
+  };
+
   return (
     <div>
       <h3 className="text-xs md:text-sm font-black uppercase tracking-wider text-[#073653]">
         {title}
       </h3>
       <div className="mt-2 md:mt-4 grid gap-1 md:gap-2 text-xs md:text-sm text-[#073653]/70">
-        {links.map((link) => (
-          <a
-            key={link}
-            href={link === "Contact" ? "/contact" : "#"}
-            className="transition hover:text-[#b00046]"
-          >
-            {link}
-          </a>
-        ))}
+        {links.map((link) => {
+          // If it matches our route map, use it. If not (like dynamic service names), link to a section anchor link.
+          const hrefTarget =
+            routeMap[link.replace(" ", "")] ||
+            `/${link.toLowerCase()}`;
+          const isExternal = hrefTarget.startsWith("http");
+
+          return (
+            <a
+              key={link}
+              href={hrefTarget}
+              target={isExternal ? "_blank" : undefined}
+              rel={isExternal ? "noopener noreferrer" : undefined}
+              className="transition hover:text-[#b00046] w-fit"
+            >
+              {link}
+            </a>
+          );
+        })}
       </div>
     </div>
   );
