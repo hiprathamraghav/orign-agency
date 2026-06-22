@@ -60,7 +60,7 @@ export function ServicePage({ serviceKey }: { serviceKey: ServiceKey }) {
           {/* FIX: Added items-stretch so that cards in the same row always have the exact same height, even if text length varies */}
           <div className="mt-10 grid gap-6 items-stretch md:grid-cols-2">
             {service.samples.map((sample, index) => (
-              <Reveal key={sample.title} delay={index * 0.08} className="h-full">
+              <Reveal key={index} delay={index * 0.08} className="h-full">
                 <MediaCard {...sample} />
               </Reveal>
             ))}
