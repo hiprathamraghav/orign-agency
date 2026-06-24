@@ -1,6 +1,7 @@
 import { Play } from "lucide-react";
 import { DriftCard } from "@/components/motion-primitives";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 type MediaCardProps = {
   title: string;
@@ -65,11 +66,16 @@ export function MediaCard({
             playsInline
           />
         ) : (
-          <img src={src} alt={title} className="size-full object-cover transition duration-700 group-hover:scale-105" />
+          <Image
+            src={src}
+            alt={title}
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            className="size-full max-w-full max-h-full object-cover transition duration-700 group-hover:scale-105"
+          />
         )}
         <div className="pointer-events-none absolute inset-0 rounded-[1.25rem] ring-1 ring-inset ring-white/20" />
         <span className="sr-only">{tag}</span>
-
       </div>
     </DriftCard>
   );
