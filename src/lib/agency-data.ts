@@ -37,7 +37,7 @@ export const services: Service[] = [
     key: "webdev",
     title: "Website Development",
     shortTitle: "Website Development",
-    intro: "Custom websites built to grow brands, convert visitors, and feel polished on every screen.",
+    intro: "High-performance websites engineered to convert. Clean frontends, instant load times, and design systems that sell.",
     href: "/webdev",
     Icon: Code2,
     
@@ -74,7 +74,7 @@ export const services: Service[] = [
     key: "videography",
     title: "Videography",
     shortTitle: "Videography",
-    intro: "Story-led video production from concept to camera-ready edits for brands and launches.",
+    intro: "Brand films and commercial shoots that earn attention. Concept to final cut with every frame built for impact.",
     href: "/videography",
     Icon: Video,
     samples: [
@@ -112,7 +112,7 @@ export const services: Service[] = [
     key: "photography",
     title: "Photography",
     shortTitle: "Photography",
-    intro: "Vibrant brand imagery and campaign photography tailored to the online moment.",
+    intro: "Premium product and brand imagery. Sharp, on-brand, built for e-commerce and campaigns that convert.",
     href: "/photography",
     Icon: Camera,
     samples: [
@@ -178,7 +178,7 @@ export const services: Service[] = [
     key: "clipping",
     title: "Edits & Clips",
     shortTitle: "Video Clipping",
-    intro: "Fast-turn edit packages and social clips that keep feeds moving and attention high.",
+    intro: "Short-form content that stops the scroll. Viral-paced edits for Reels, Shorts, and TikToks that hook in 3 seconds.",
     href: "/clipping",
     Icon: Clapperboard,
     samples: [
@@ -212,7 +212,7 @@ export const services: Service[] = [
     key: "podcasts",
     title: "Podcast Production",
     shortTitle: "Podcasts",
-    intro: "Podcast production and launch support for shows that sound professional and feel on-brand.",
+    intro: "Podcast production that sounds professional and feels authentic. Multi-cam shoots, clean audio, full post-production.",
     href: "/podcasts",
     Icon: Mic2,
     samples: [
@@ -256,7 +256,7 @@ export const services: Service[] = [
     key: "social-media",
     title: "Social Media Management",
     shortTitle: "Social Media",
-    intro: "Content planning, creative execution, and paid social support to help brands stay visible.",
+    intro: "Content planning and daily execution that keeps feeds moving. We manage output, track what works, and iterate fast.",
     href: "/social-media",
     Icon: Share2,
     samples: [
@@ -303,18 +303,18 @@ export const navItems = [
 export const processSteps = [
   {
     title: "Discovery & Strategy",
-    body: "We map the brand, audience, channels, and business goal before we design a single frame.",
+    body: "Map the brand, audience, channels, and business goal before we design anything.",
   },
   {
     title: "Creative Sprint",
-    body: "Concepts become scripts, shot lists, wireframes, moodboards, and a production plan.",
+    body: "Turn concepts into scripts, shot lists, wireframes, and production blueprints.",
   },
   {
     title: "Production & Launch",
-    body: "We shoot, edit, design, develop, publish, and polish until the assets are ready to perform.",
+    body: "Shoot, edit, design, code, publish. We don't hand off until assets are ready to perform.",
   },
   {
     title: "Insight Analysis",
-    body: "We review performance, learn what worked, and turn the next cycle into sharper creative.",
+    body: "Review what worked, learn what didn't, feed insights into the next cycle of creative.",
   },
 ];

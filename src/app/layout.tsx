@@ -11,11 +11,11 @@ const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
   title: {
-    default: "Orign | Digital Marketing & Creative Agency",
-    template: "%s | Orign | Digital Marketing & Creative Agency",
+    default: "ORIGN | Digital Marketing & Creative Agency",
+    template: "%s | ORIGN",
   },
   description:
-    "Orign is an elite creative agency architecting high-performance websites, premium videography, luxury photography, automated social video clipping, showrunning podcasts, and content growth systems for high-momentum brands.",
+    "ORIGN is a premium creative agency architecting high-performance websites, professional videography, premium photoshoots, short-form video clipping, podcast production, and content systems for startups and brands.",
   keywords: [
     // --- Premium Agency Positioning ---
     "premium creative agency",
@@ -45,9 +45,9 @@ export const metadata: Metadata = {
     "organic social media management",
     "high retention content creation",
   ],
-  authors: [{ name: "Orign Studio Team", url: "https://orign.co.in" }],
-  creator: "Orign",
-  publisher: "Orign",
+  authors: [{ name: "ORIGN Studio Team", url: "https://orign.co.in" }],
+  creator: "ORIGN",
+  publisher: "ORIGN",
   formatDetection: {
     email: false,
     address: false,
@@ -57,26 +57,26 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://orign.co.in",
-    siteName: "Orign Creative",
-    title: "Orign | Digital Marketing & Creative Agency",
+    siteName: "Orign",
+    title: "ORIGN | Digital Marketing & Creative Agency",
     description:
-      "We build high-performance digital interfaces, premium podcasts, dynamic visual content assets, and structural social media systems that make modern brands impossible to ignore.",
+      "ORIGN builds high-performance websites and premium production systems—web, video, photo, podcast, and short-form edits—for tech startups and growing brands.",
     images: [
       {
         url: "https://orign.co.in/logo.jpeg",
         width: 1200,
         height: 630,
-        alt: "Orign Creative Agency Production Frame",
+        alt: "ORIGN Creative Agency Production Frame",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Orign | Digital Marketing & Creative Agency",
+    title: "ORIGN | Digital Marketing & Creative Agency",
     description:
-      "Architecting premium digital assets, high-retention video pipelines, and bespoke web platforms for brands with market momentum.",
+      "Premium websites, professional video production, and high-retention content systems—engineered by ORIGN.",
     images: ["https://orign.co.in/logo.jpeg"],
-    creator: "@orignagency",
+    creator: "@orign.co.in",
   },
   robots: {
     index: true,
@@ -140,13 +140,13 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "ProfessionalService",
-              name: "Orign",
-              officialName: "Orign Creative Agency",
+              name: "ORIGN",
+              officialName: "ORIGN | Digital Marketing & Creative Agency",
               image: "https://orign.co.in/logo.jpeg",
               url: "https://orign.co.in",
               logo: "https://orign.co.in/logo.jpeg",
               description:
-                "An elite creative production agency specializing in bespoke enterprise web development, premium multi-cam videography, commercial photography, strategic social clipping engines, and complete end-to-end podcast production systems.",
+              "ORIGN is a premium creative agency architecting high-performance websites, professional videography, premium photoshoots, short-form video clipping, podcast production, and content systems for startups and brands.",
               sameAs: [
                 "https://x.com/orign911",
                 "https://instagram.com/orign.co.in",
@@ -159,12 +159,14 @@ export default function RootLayout({
               },
               knowsAbout: [
                 "Web Development",
+
                 "Next.js Development",
                 "Videography",
                 "Commercial Photography",
-                "Short Form Video Infrastructure",
-                "Podcast Production Systems",
-                "Social Media Architecture",
+                "Short Form Video Editing",
+
+                "Podcast Production",
+                "Social Media Systems",
                 "Brand Scaling Strategy",
                 "Video Editing",
                 "Video Clipping",

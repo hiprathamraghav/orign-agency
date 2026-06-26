@@ -10,7 +10,7 @@ export interface FormState {
   message: string;
 }
 
-export async function sendContactEmail(prevState: any, formData: FormData): Promise<FormState> {
+export async function sendContactEmail(_: unknown, formData: FormData): Promise<FormState> {
   // Extract inputs matching your form's "name" attributes
   const name = formData.get("name") as string;
   const email = formData.get("email") as string;
@@ -30,7 +30,7 @@ export async function sendContactEmail(prevState: any, formData: FormData): Prom
     await resend.emails.send({
       from: "onboarding@resend.dev", // Replace with your verified custom domain email once configured in Resend (e.g., hello@orign.co.in)
       to: ["theorign911@gmail.com"], // Your inbox destination
-      subject: `🚨 New Lead // ${company} - ${service}`,
+      subject: `New ORIGN lead // ${company} - ${service}`,
       replyTo: email,
       html: `
         <!DOCTYPE html>
@@ -82,13 +82,13 @@ export async function sendContactEmail(prevState: any, formData: FormData): Prom
               
               <!-- Message Area -->
               <div style="margin-bottom: 24px;">
-                <h3 style="font-size: 11px; font-weight: bold; color: rgba(7, 17, 31, 0.4); text-transform: uppercase; margin: 0 0 8px 0;">Project Core Brief:</h3>
+                <h3 style="font-size: 11px; font-weight: bold; color: rgba(7, 17, 31, 0.4); text-transform: uppercase; margin: 0 0 8px 0;">Project Brief:</h3>
                 <div style="background-color: #fbfaf3; border: 1px solid rgba(7, 17, 31, 0.1); padding: 16px; border-radius: 8px; font-size: 14px; line-height: 1.6; color: #07111f; white-space: pre-wrap;">${message}</div>
               </div>
               
               <!-- Footer Token -->
               <div style="border-t: 1px solid rgba(7, 17, 31, 0.1); pt: 16px; text-align: center; font-size: 10px; color: rgba(7, 17, 31, 0.3); text-transform: uppercase; letter-spacing: 1px;">
-                Orign Automation Core Engine // Via Resend API
+                ORIGN Automation Core Engine // Via Resend API
               </div>
             </div>
           </body>
@@ -104,7 +104,7 @@ export async function sendContactEmail(prevState: any, formData: FormData): Prom
     console.error("Resend API Error:", error);
     return {
       success: false,
-      message: "Transmission broke. Please try again or drop a line straight to hello@orign.studio.",
+      message: "Transmission broke. Please try again or drop a line straight to theorign911@gmail.com",
     };
   }
 }

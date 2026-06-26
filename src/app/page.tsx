@@ -9,11 +9,13 @@ import {
   ArrowUpRight,
   BadgeCheck,
   ChevronDown,
+  Contact,
   Megaphone,
   PenTool,
   Quote,
   Sparkles,
   Star,
+  Video,
 } from "lucide-react";
 import { ButtonLink } from "@/components/button";
 import {
@@ -191,108 +193,89 @@ const team = [
 export default function Home() {
   return (
     <main className="overflow-hidden bg-[#fbfaf3] text-[#07111f]">
-      {/* Hero Section */}
+      {/* Hero Section (updated styling + layout from attached reference, kept repo theme) */}
+      <section className="relative min-h-[92vh] flex items-center justify-center overflow-hidden bg-[#fbfaf3] px-4 pb-16 pt-24 sm:px-6 md:px-8 lg:min-h-[100vh]" id="hero">
+        {/* Ambient mesh gradients (repo theme) */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_55%_at_50%_-5%,rgba(86,27,244,0.22),transparent),radial-gradient(circle_at_80%_80%,rgba(185,255,23,0.18),transparent_45%)] pointer-events-none" />
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(7,17,31,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(7,17,31,0.06)_1px,transparent_1px)] bg-[size:60px_60px] [mask-image:radial-gradient(ellipse_60%_55%_at_50%_50%,#000_60%,transparent)] pointer-events-none" />
 
-      {/* Revamped High-Impact Hero Section */}
-      <section className="relative min-h-[92vh] flex items-center justify-center overflow-hidden bg-[#fbfaf3] px-4 pb-16 pt-24 sm:px-6 md:px-8 lg:min-h-[100vh]">
-        {/* Layer 1: Ambient Mesh Gradients */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_15%,rgba(185,255,23,0.35),transparent_30%),radial-gradient(circle_at_85%_20%,rgba(199,167,255,0.4),transparent_25%),radial-gradient(circle_at_15%_75%,rgba(255,75,62,0.2),transparent_30%)] pointer-events-none" />
-
-        {/* Layer 2: Subtle Modern Tech Grid Overlay */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(7,17,31,0.02)_1px,transparent_1px),linear-gradient(to_bottom,rgba(7,17,31,0.02)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] pointer-events-none" />
-
-        {/* Reference Image Layout Layer: Abstract flanking lifestyle assets inspired by image_825581.png */}
-        <div className="absolute inset-0 pointer-events-none select-none z-0 overflow-hidden mix-blend-multiply opacity-25 sm:opacity-40">
-          {/* Top Left Asset Silhouette (Sneakers Reference) */}
-          <div className="absolute -top-12 -left-16 w-44 h-44 sm:w-64 sm:h-64 rotate-12 bg-gradient-to-br from-lime-300 to-emerald-200 rounded-[3rem] blur-sm transform opacity-60" />
-          {/* Bottom Right Asset Silhouette (Product Tube Reference) */}
-          <div className="absolute -bottom-16 -right-12 w-40 h-64 sm:w-56 sm:h-80 -rotate-12 bg-gradient-to-tr from-violet-300 to-fuchsia-200 rounded-[2rem] blur-sm transform opacity-60" />
-        </div>
-
-        {/* Layer 3: Dynamic Floating Tech Badges (Premium layout on desktop) */}
-        <div className="absolute inset-0 max-w-7xl mx-auto hidden lg:block pointer-events-none z-10">
-          <div className="absolute top-[20%] left-[4%] -rotate-6 animate-bounce [animation-duration:8s] bg-white border border-[#07111f]/10 px-4 py-2 rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex items-center gap-2">
-            <span className="size-2 rounded-full bg-blue-500 animate-pulse" />
+        {/* Floating service chips */}
+        <div className="absolute inset-0 max-w-7xl mx-auto hidden lg:block pointer-events-none">
+          <div className="absolute top-[22%] left-[4%] rounded-2xl border border-[#07111f]/10 bg-white/70 backdrop-blur-sm px-4 py-2 flex items-center gap-2 shadow-[0_18px_55px_rgba(7,17,31,0.08)]">
+            <Sparkles className="size-3 text-lime-300 fill-lime-300" />
             <span className="text-[11px] font-black uppercase tracking-wider text-[#07111f]/70">
-              Web Infrastructure
+              Website Development
             </span>
           </div>
-          <div className="absolute top-[24%] right-[4%] rotate-3 animate-bounce [animation-duration:11s] bg-white border border-[#07111f]/10 px-4 py-2 rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex items-center gap-2">
-            <span className="size-2 rounded-full bg-emerald-400 animate-pulse" />
+          <div className="absolute top-[24%] right-[4%] rounded-2xl border border-[#07111f]/10 bg-white/70 backdrop-blur-sm px-4 py-2 flex items-center gap-2 shadow-[0_18px_55px_rgba(7,17,31,0.08)]">
+            <Video className="size-3 text-[#561bf4]" />
             <span className="text-[11px] font-black uppercase tracking-wider text-[#07111f]/70">
-              Interface Design
+              Proffesional Photoshoots
             </span>
           </div>
-          <div className="absolute bottom-[26%] left-[6%] rotate-6 bg-[#07111f] px-4 py-2 rounded-xl shadow-xl flex items-center gap-2">
+          <div className="absolute bottom-[26%] left-[6%] rounded-2xl border border-[#07111f]/10 bg-[#07111f] px-4 py-2 flex items-center gap-2 shadow-xl">
             <Sparkles className="size-3 text-lime-300 fill-lime-300" />
             <span className="text-[11px] font-black uppercase tracking-wider text-white">
-              Cinematic Reels
+              Podcasts & clippings
             </span>
           </div>
-          <div className="absolute bottom-[24%] right-[6%] -rotate-3 bg-white border border-[#07111f]/10 px-4 py-2 rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex items-center gap-2">
-            <span className="size-2 rounded-full bg-[#ff4b3e]" />
+          <div className="absolute bottom-[24%] right-[6%] rounded-2xl border border-[#07111f]/10 bg-white/70 backdrop-blur-sm px-4 py-2 flex items-center gap-2 shadow-[0_18px_55px_rgba(7,17,31,0.08)]">
+            <Megaphone className="size-3 text-[#ff4b3e]" />
             <span className="text-[11px] font-black uppercase tracking-wider text-[#07111f]/70">
-              Social Architecture
+              Social Media Management
             </span>
           </div>
         </div>
 
-        {/* Main Hero Container */}
         <div className="relative z-20 mx-auto w-full max-w-5xl flex flex-col items-center justify-center text-center">
-          {/* Animated Micro Badge */}
           <Reveal>
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#07111f]/12 bg-[#07111f] px-4 py-1.5 text-[10px] font-black uppercase tracking-widest text-white shadow-md sm:mb-8 sm:text-xs">
+            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#07111f]/12 bg-[#07111f] px-4 py-1.5 text-[10px] font-black uppercase tracking-widest text-white shadow-md">
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-lime-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-lime-300"></span>
+                <span className="animate-ping absolute inset-0 rounded-full bg-lime-300 opacity-75" />
+                <span className="relative rounded-full h-2 w-2 bg-lime-300" />
               </span>
-              Digital Marketing and Creative Agency
+              ORIGN | Digital Marketing & Creative Agency
             </div>
           </Reveal>
 
-          {/* High-Impact Kinetic Typography matching image_825581.png layout structures */}
-          <Reveal delay={0.1}>
-            <h1 className="text-[10vw] font-black uppercase tracking-tighter leading-[0.95] text-[#07111f] sm:text-6xl md:text-7xl lg:text-[5.5rem] xl:text-[6.8rem] flex flex-col items-center">
-              <span className="block">Elevate Your</span>
-
-              {/* Inline layout containing the purple graphic token mimicking the image reference */}
-              <span className="inline-flex items-center justify-center flex-wrap gap-x-2 sm:gap-x-4">
-                Brand
-                <span className="inline-flex items-center justify-center size-8 sm:size-14 md:size-16 rounded-full bg-[#561bf4] border-2 border-lime-300 text-white shadow-md transform hover:rotate-45 transition-transform duration-300 mx-1">
-                  <span className="size-3 sm:size-5 border-2 border-white rounded-sm rotate-45 flex items-center justify-center">
-                    <span className="size-1 bg-white rounded-full" />
-                  </span>
+          {/* Kinetic headline (keeps your colors) */}
+          <Reveal delay={0.08}>
+            <div className="flex flex-col items-center">
+              <h1 className="text-[10vw] sm:text-6xl md:text-7xl lg:text-[5.5rem] xl:text-[6.8rem] font-black uppercase tracking-tighter leading-[0.92]">
+                <span className="block text-[#07111f]">We Build</span>
+              </h1>
+              <div className="mt-2 flex items-center gap-3 flex-wrap justify-center">
+                <span className="relative text-[10vw] sm:text-6xl md:text-7xl lg:text-[5.5rem] xl:text-[6.8rem] font-black uppercase tracking-tighter leading-[0.92] text-[#07111f]">
+                  Brands
                 </span>
-                with Our
-              </span>
-
-              {/* Wrapped pill layout mimicking the vibrant "Creative Magic" segment */}
-              <span className="inline-flex items-center justify-center flex-wrap gap-x-3 mt-1">
-                <span className="inline-block bg-[#b9ff17] text-[#07111f] px-4 py-0 sm:px-7 sm:py-1.5 rounded-[1.2rem] sm:rounded-[2rem] border-2 border-[#07111f] shadow-[4px_4px_0px_#07111f] transform -rotate-1 tracking-tight normal-case font-black">
-                  Creative
+                <span className="inline-flex items-center justify-center size-12 sm:size-16 md:size-20 rounded-full bg-[#561bf4] border-2 border-lime-300 shadow-md">
+                  <span className="size-5 sm:size-6 md:size-7 rounded-full bg-lime-300" />
                 </span>
-                <span className="block">Magic</span>
+                <span className="text-[10vw] sm:text-6xl md:text-7xl lg:text-[5.5rem] xl:text-[6.8rem] font-black uppercase tracking-tighter leading-[0.92] text-[#07111f]">
+                  That Actually
+                </span>
+              </div>
+              <span className="inline-block text-8xl sm:text-6xl md:text-7xl lg:text-[5.5rem] xl:text-[6.8rem] mt-2 bg-[#b9ff17] text-[#07111f] px-5 py-1.5 rounded-[2rem] border-2 border-[#07111f] shadow-[4px_4px_0px_#07111f] -rotate-1 font-black uppercase tracking-tight">
+                Scale
               </span>
-            </h1>
+            </div>
           </Reveal>
+          
+          {/* 
+            <Reveal delay={0.18}>
+              <p className="mx-auto mt-8 max-w-md text-xs sm:text-base font-bold leading-relaxed text-[#07111f]/70 px-4 sm:mt-10 sm:max-w-xl md:text-lg">
+                ORIGN crafts Next.js platforms, cinematic brand films, high-retention social content, and premium photography—built to convert and scale.
+              </p>
+            </Reveal> 
+          */}
 
-          {/* Structured Paragraph Body */}
-          <Reveal delay={0.2}>
-            <p className="mx-auto mt-8 max-w-md text-xs font-bold leading-relaxed text-[#07111f]/70 px-4 sm:mt-10 sm:text-base sm:max-w-xl md:text-lg">
-              Orign architects high-retention podcasts, premium digital
-              interfaces, dynamic shorts, and brand systems that dictate market
-              positioning.
-            </p>
-          </Reveal>
-
-          {/* Premium Asymmetrical Interactive Buttons */}
-          <Reveal delay={0.3}>
+          <Reveal delay={0.28}>
             <div className="mt-10 flex w-full flex-col items-center justify-center gap-4 px-4 sm:w-auto sm:flex-row sm:gap-6 sm:px-0">
               <Link
                 href="#work"
                 className="group relative flex w-full items-center justify-center gap-3 rounded-full bg-[#07111f] px-8 py-4 text-xs font-black uppercase tracking-wider text-white shadow-xl transition-all duration-300 hover:bg-[#b00046] active:scale-[0.98] sm:w-auto"
               >
-                Explore Case Studies
+                View Our Work
                 <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
 
@@ -300,29 +283,28 @@ export default function Home() {
                 href="/contact"
                 className="group inline-flex w-full items-center justify-center gap-2 border-b-2 border-[#07111f] py-2 text-xs font-black uppercase tracking-wider text-[#07111f] transition-colors duration-300 hover:text-[#b00046] hover:border-[#b00046] sm:w-auto"
               >
-                Secure a Quote
+                Book a Discovery Call
                 <ArrowUpRight className="size-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </Link>
             </div>
           </Reveal>
         </div>
 
-        {/* Modern Absolute Bottom Indicator Anchor */}
         <div className="absolute bottom-6 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2 text-[9px] font-black uppercase tracking-widest text-[#07111f]/40">
           <div className="w-px h-8 bg-gradient-to-b from-[#07111f]/30 to-transparent animate-pulse" />
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* Services Section (updated to stacked scroll style; colors preserved) */}
       <section id="services" className="px-3 py-12 md:px-8 md:py-20 sm:px-6">
         <div className="mx-auto max-w-6xl">
           <Reveal>
             <div>
               <p className="text-xs font-black uppercase text-[#ff4b3e] md:text-sm">
-                You know what?
+                Our Expertise
               </p>
               <h2 className="mt-2 md:mt-3 max-w-4xl text-2xl font-black uppercase leading-[1] text-[#073653] sm:text-3xl md:text-5xl">
-                We design meaningful, not just quick impressions
+               Six Domains, One Agency
               </h2>
             </div>
           </Reveal>
@@ -378,9 +360,6 @@ export default function Home() {
                   How we drive your brand to new heights
                 </h2>
               </div>
-              <p className="text-sm leading-6 md:leading-8 text-[#07111f]/62 md:text-base">
-                A focused path from messy ambition to polished, useful creative.
-              </p>
             </div>
           </Reveal>
           <div className="mt-8 space-y-3 md:mt-14 md:space-y-6">
@@ -416,16 +395,12 @@ export default function Home() {
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 md:gap-6 border-b border-white/10 pb-8 md:pb-10">
               <div className="max-w-2xl">
                 <p className="text-xs font-black uppercase tracking-widest text-lime-300 mb-2">
-                  Selected Showcase
+                  Recent Work
                 </p>
                 <h2 className="text-2xl font-black uppercase leading-[1.1] sm:text-3xl md:text-4xl">
-                  Where flawless engineering meets disruptive design.
+                  Complete solutions, Refined execution
                 </h2>
               </div>
-              <p className="text-xs md:text-sm leading-6 md:leading-7 text-white/60 max-w-xs md:text-right">
-                We craft intentional identity shifts through modern web
-                infrastructure, targeted media formats, and digital precision.
-              </p>
             </div>
           </Reveal>
 
@@ -463,19 +438,15 @@ export default function Home() {
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
               <div className="max-w-xl">
                 <span className="text-[10px] font-black uppercase tracking-widest text-white bg-[#07111f] px-3 py-1 rounded-md inline-block mb-3">
-                  Verified Ecosystem Trust
+                  What people say
                 </span>
                 <h2 className="text-4xl font-black uppercase tracking-tighter text-[#07111f] sm:text-5xl md:text-6xl leading-[0.9]">
-                  Proof in the{" "}
+                  Trusted by over{" "}
                   <span className="inline-block text-transparent [-webkit-text-stroke:1px_#07111f] font-serif lowercase italic tracking-normal normal-case pr-1">
-                    metrics.
+                    100+ Brands
                   </span>
                 </h2>
               </div>
-              <p className="max-w-xs text-xs font-bold leading-relaxed text-[#07111f]/60 border-l-2 border-[#b9ff17] pl-4">
-                How precise architectural mapping and creative magic unlocked
-                compounding scaling loops for hyper-growth brands.
-              </p>
             </div>
           </Reveal>
         </div>
@@ -573,8 +544,7 @@ export default function Home() {
             <div className="relative z-10 max-w-3xl mx-auto text-center">
               <Reveal>
                 <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 text-lime-300 text-xs font-bold uppercase tracking-widest mb-4 md:mb-6">
-                  <Sparkles className="size-3.5 fill-lime-300" /> Partnerships
-                  open 2026
+                  <Contact className="size-3.5 fill-lime-300" /> Contact Us
                 </span>
                 <h2 className="text-2xl font-black uppercase leading-[1.05] sm:text-3xl md:text-5xl">
                   Let&apos;s Build Your Brand&apos;s Future Through Design
@@ -776,7 +746,7 @@ export default function Home() {
                   height={28}
                   className="rounded-full object-cover md:size-8"
                 />
-                Orign
+                ORIGN
               </p>
               <p className="mt-3 md:mt-4 max-w-sm text-xs md:text-sm leading-5 md:leading-6 text-[#073653]/70">
                 Follow us for production notes, launch ideas, design systems,
@@ -786,7 +756,7 @@ export default function Home() {
                 href="mailto:orign911@gmail.com"
                 className="mt-3 md:mt-4 block text-xs md:text-sm font-bold text-[#073653] hover:underline"
               >
-                info@orign.studio
+                theorign911@gmail.com
               </a>
             </div>
             <FooterLinks
@@ -803,38 +773,27 @@ export default function Home() {
             />
           </div>
 
-          <div className="flex flex-col justify-between gap-3 md:gap-4 border-t border-[#073653]/20 pt-4 md:pt-6 text-xs md:text-sm text-[#073653]/70">
-            <p>© 2026 Orign Creative Studio</p>
+          <div className="flex justify-between gap-3 md:gap-4 border-t border-[#073653]/20 pt-4 md:pt-6 text-xs md:text-sm text-[#073653]/70">
+            <p>© 2026 ORIGN</p>
             <p>All Rights Reserved</p>
           </div>
 
           <Link
             href="/"
-            className="group mt-6 md:mt-8 flex items-center justify-center gap-2 md:gap-4 rounded-2xl md:rounded-[2rem] border border-[#07111f]/12 py-3 md:py-4 text-center text-[8vw] md:text-[8.8rem] font-black uppercase leading-none text-transparent [-webkit-text-stroke:1px_rgba(7,17,31,0.18)] transition duration-500 hover:border-lime-300 hover:text-[#07111f] hover:[text-shadow:0_0_44px_rgba(185,255,23,0.65)]"
+            className="group mt-6 md:mt-24 flex items-center justify-center gap-2 md:gap-4 rounded-2xl md:rounded-[2rem] border py-3 md:py-4 text-center text-[8vw] md:text-[8.8rem] font-black uppercase leading-none transition duration-500 
+
+/* Mobile & Tablet defaults (Your hover styles applied natively) */
+border-lime-300 text-[#07111f] [text-shadow:0_0_44px_rgba(185,255,23,0.65)] [-webkit-text-stroke:0px]
+
+/* Desktop / Large screen overrides (Reset to transparent, apply hover) */
+lg:border-[#07111f]/12 lg:text-transparent lg:[-webkit-text-stroke:1px_rgba(7,17,31,0.18)] lg:[text-shadow:none]
+lg:hover:border-lime-300 lg:hover:text-[#07111f] lg:hover:[text-shadow:0_0_44px_rgba(185,255,23,0.65)]"
           >
-            Orign
+            ORIGN
           </Link>
         </div>
       </footer>
     </main>
-  );
-}
-
-function FloatingTile({
-  label,
-  className,
-  color,
-}: {
-  label: string;
-  className: string;
-  color: string;
-}) {
-  return (
-    <div
-      className={`absolute hidden rounded-2xl bg-gradient-to-br ${color} p-5 text-sm font-black uppercase shadow-2xl opacity-70 blur-[0.2px] md:block ${className}`}
-    >
-      {label}
-    </div>
   );
 }
 
