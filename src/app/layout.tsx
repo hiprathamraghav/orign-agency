@@ -1,6 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import Image from "next/image";
 import { SiteNav } from "@/components/site-nav";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
