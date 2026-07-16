@@ -288,6 +288,13 @@ export const services: Service[] = [
         src: "/social-media/smm4.mp4",
         tag: "Publishing",
       },
+      {
+        title: "smm5",
+        type: "video",
+        format: "portrait",
+        src: "/social-media/smm5.mp4",
+        tag: "Growth",
+      }
     ],
   },
 ];
